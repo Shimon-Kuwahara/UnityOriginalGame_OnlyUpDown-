@@ -1,23 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public float time;
-    public float highScore;
     public Text timeText;
-    public GameObject GameManager;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
+    public float time;
 
-    // Update is called once per frame
+    public Slider slider;
+    private float GravityMaxTime= 1.0f;
+    public float ReverceTime;
+
     void Update()
     {
         time += Time.deltaTime;
+        timeText.text = "経過時間："+time.ToString("f2");
+
+        slider.value = (1 - ReverceTime) / GravityMaxTime;
     }
 }
