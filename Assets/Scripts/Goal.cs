@@ -17,6 +17,8 @@ public class Goal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        this.gameObject.transform.Rotate(0.1f, 0.1f, 0.1f);
+
         if (PositionChecker.gameObject.transform.position.y < -10)
         {
             GameOver();

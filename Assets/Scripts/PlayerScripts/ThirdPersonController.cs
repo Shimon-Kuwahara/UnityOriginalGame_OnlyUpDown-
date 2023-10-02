@@ -128,8 +128,6 @@ namespace StarterAssets
                 uIManager.ReverceTime -= Time.deltaTime * 0.1f;
             }
 
-
-
             if (!Grounded)
             {
                 if (Input.GetKeyDown(KeyCode.G) && G_Check != true)
